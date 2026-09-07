@@ -1,0 +1,237 @@
+/* =========================================================
+   Article Page Design (Aligned with home.css Design System)
+   ========================================================= */
+
+/* 文章主要頁面寬度與容器 */
+.article-container {
+    max-width: 820px; /* 最佳閱讀字行寬度 */
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem 1.5rem;
+}
+
+/* 麵包屑導覽 (Breadcrumb) */
+.breadcrumb {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-brick);
+}
+
+.breadcrumb .separator {
+    color: var(--border-color);
+}
+
+.breadcrumb .current {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* 1. 文章 Header 區塊 */
+/* 標題區塊外框：改為垂直堆疊結構 */
+.article-header {
+    display: flex;
+    flex-direction: column; /* 強制所有子元素由上往下垂直排列 */
+    align-items: flex-start;/* 左對齊 */
+    border-bottom: 2px solid var(--text-main);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* 1. 最上層 Tag */
+.article-tag {
+    font-size: 0.8rem;
+    color: var(--accent-brick);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem; /* 與標題拉開距離 */
+    line-height: 1.4;
+}
+
+/* 2. 主標題 (獨佔整行，不卡其他元件) */
+.article-title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text-main);
+    margin: 0 0 1rem 0; /* 下方留出 space 給 meta */
+    width: 100%;        /* 讓標題撐滿整個寬度 */
+    word-break: break-word; /* 防止長文字爆框 */
+}
+
+/* 標題裡面的【類型】前綴 */
+.title-prefix {
+    color: var(--accent-brick);
+    font-weight: 700;
+    margin-right: 0.3rem;
+    display: inline-block; /* 確保【類型】跟著標題文字自然流動 */
+}
+
+/* 3. 最下層 Meta 資訊 */
+.article-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;     /* 手機版字數多時可自動折行 */
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.meta-divider {
+    color: var(--border-color);
+}
+
+/* 2. 前言 / 摘要區塊 */
+.article-summary {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-brick);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.7;
+}
+
+/* 3. 內文區塊 (Article Body) */
+.article-body {
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: var(--text-main);
+}
+
+.article-body p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+}
+
+.article-body h2 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 3rem 0 1.2rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.article-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+}
+
+/* Blockquote 佳句/引言 */
+.article-body blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--accent-brick);
+    border-left: 2px solid var(--accent-brick);
+    padding-left: 1.2rem;
+    margin: 2rem 0;
+}
+
+/* 多媒體容器 (圖片與影片) */
+.article-media {
+    margin: 2.5rem 0;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+}
+
+.article-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 響應式 16:9 影片容器 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 0.75rem;
+    padding: 0 0.5rem;
+}
+
+/* 4. 參考資料區塊 */
+.article-references {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--text-main);
+}
+
+.ref-title {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.ref-list {
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.ref-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* 返回按鈕 */
+.article-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-back {
+    display: inline-block;
+    border: 1px solid var(--text-main);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: var(--accent-brick);
+    color: #ffffff;
+    border-color: var(--accent-brick);
+}
+
+/* 響應式微調 */
+@media (max-width: 768px) {
+    .article-title { font-size: 1.8rem; }
+    .article-container { padding: 2rem 1rem 4rem 1rem; }
+    .article-body { font-size: 1rem; }
+}

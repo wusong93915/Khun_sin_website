@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章標題 - 空間專題紀錄</title>
+    <!-- Google Fonts 引入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- 樣式表鏈結 -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/article.css">
+</head>
+<script src="../js/main.js" defer></script>
+<script src="../js/article.js" defer></script>
+<body>
+
+    <!-- 頂部導覽列 (與主頁風格一致) -->
+    <header>
+        <div class="logo">
+            <a href="../index.html">ARCHITECTURE <span>/ URBAN STUDIES</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">首頁</a></li>
+                <li><a href="../index.html#essays">論述區</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主文章容器 -->
+    <main class="article-container">
+        
+        <!-- 麵包屑導覽 -->
+        <nav class="breadcrumb">
+            <a href="../index.html">首頁</a>
+            <span class="separator">/</span>
+            <a href="../index.html#essays">論述區</a>
+            <span class="separator">/</span>
+            <span class="current">正文</span>
+        </nav>
+
+        <article>
+            <!-- 1. 文章標題區 -->
+            <header class="article-header">
+                <div class="article-tag">Urban Morphology / 都市型態學</div>
+                <h1 class="article-title">從空間視角看鯤鯓的都市轉型與聚落演變</h1>
+                <div class="article-meta">
+                    <span class="meta-date">發布日期：2026-09-04</span>
+                    <span class="meta-divider">|</span>
+                    <span class="meta-author">作者：郭柏辰</span>
+                    <span class="meta-divider">|</span>
+                    <!-- JS 會自動動態填入這裡的數字 -->
+                <span class="meta-item" id="read-time">計算閱讀時間中...</span>
+                </div>
+            </header>
+
+            <!-- 2. 概述 / 前言區塊 -->
+            <section class="article-summary">
+                <p><strong>前言摘要：</strong>本篇研究探討鯤鯓港區在過去數十年經歷的劇烈空間轉變。透過觀察海岸線演變、舊聚落紋理與近代公共設施建構，剖析地理空間如何影響在地產業轉型與居民生活型態的重塑。</p>
+            </section>
+
+            <!-- 3. 正文內文區 (Markdown 轉換後的 HTML 請貼在此處) -->
+            <section class="article-body"id="article-body">
+                <p>鯤鯓地區作為傳統漁港聚落，其空間紋理反映了典型的沿海防風與水陸並進特性。隨著都市化進程與港灣機能的調整，早期的巷弄紋理面臨了現代道路系統的衝擊與重組。</p>
+
+                <h2>一、 空間紋理的歷史演變</h2>
+                <p>觀察日治時期至近代的都市計畫圖資，可以發現舊聚落核心主要圍繞於信仰中心與碼頭周邊。隨著水路運輸轉向陸路運輸，都市邊緣產生了新的產業用地與公共設施分配。</p>
+
+                <!-- 預留插入圖片區塊 -->
+                <figure class="article-media media-image">
+                    <img src="images/map-sample.jpg" alt="鯤鯓舊城區空間紋理演變示意圖">
+                    <figcaption>圖 1：鯤鯓舊城區空間紋理與計畫道路套繪分析圖（資料來源：作者自繪）</figcaption>
+                </figure>
+
+                <p>歷史紋理的斷裂常見於快速道路與港埠設施的闢建過程中，這種空間切割不僅改變了地景，也重塑了居民日常移動的動線習慣。</p>
+
+                <h2>二、 現代發展與影音紀錄介入</h2>
+                <p>近年來透過濱海快速道路與新興公園綠地的闢建，劃分出新的空間邊界。這不僅改變了沿海的風貌，也帶動了周邊住宅區的形態轉換。</p>
+
+                <!-- 預留插入影音區塊 -->
+                <figure class="article-media media-video">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="影音紀錄" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <figcaption>影片 1：鯤鯓港灣歷史地景口述歷史紀錄片（長度：05 分 30 秒）</figcaption>
+                </figure>
+
+                <p>綜觀整體演變，未來的空間策略應更著重於新舊系統的介面整合，保持歷史紋理連續性的同時，提升現代機能的供給效率。</p>
+
+                <blockquote>
+                    「空間不只是歷史的容器，更是社會關係與集體記憶生產的積極媒介。」
+                </blockquote>
+            </section>
+
+            <!-- 4. 參考資料區塊 -->
+            <section class="article-references">
+                <h3 class="ref-title">參考資料與文獻</h3>
+                <ol class="ref-list">
+                    <li>臺灣省文獻委員會（1998），《臺灣地名辭書卷二：臺南市》，南投：臺灣省文獻委員會。</li>
+                    <li>鯤鯓市政府都市發展局（2015），《鯤鯓港區總體空間規劃與永續發展計畫報告書》。</li>
+                    <li>國家圖書館台灣記憶資料庫，〈鯤鯓沿海聚落歷史照片輯〉。</li>
+                </ol>
+            </section>
+        </article>
+
+        <!-- 頁尾文章導覽頁籤 -->
+        <div class="article-nav">
+            <a href="../index.html#essays" class="btn-back">← 返回文章列表</a>
+        </div>
+    </main>
+
+    <!-- 頁尾 (與主頁一致) -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">URBAN & SPATIAL RESEARCH</div>
+                <p>關注建築理論、都市紋理與歷史空間演變的個人研究紀錄網站。</p>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 All Rights Reserved. Designed for Urban Studies Portfolio.
+        </div>
+    </footer>
+
+</body>
+</html>

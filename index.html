@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鯤鯓市空間研究計畫 | Khun-Sin City Spatial Research</title>
+    <link rel="icon" type="image/svg+xml" href="/svg/Favicon.svg">
+    <!-- 引入 Google Fonts 襯線與無襯線體，營造雜誌質感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css\home.css" />
+    
+</head>
+<script src="js/main.js" defer></script>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="/svg/logo.svg" alt="鯤鯓市徽" class="logo-icon">
+            鯤鯓市 <span> / KHUN-SIN CITY</span>
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="#masterplan">總體規劃</a></li>
+                <li><a href="#gallery">空間圖鑑</a></li>
+                <li><a href="#essays">空間論述</a></li>
+                <li><a href="#about">關於</a></li>
+                <li><a href="/pages/gov_index.html" class="btn-portal" title="模擬進入鯤鯓市政府官網">鯤鯓市政府 Portal ↗</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero 主視覺 (使用高密度街景 rendering) -->
+    <section class="hero">
+        <img src="/main_img/newbanner.png" alt="鯤鯓市街道渲染圖" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag">Virtual Urbanism & Spatial Research</div>
+            <h1 class="hero-title">以方塊重構臺灣城鄉紋理<br>在架空記憶中探索真實空間</h1>
+            <p class="hero-subtitle">以 Minecraft 為研究載體，探索戰後台灣建築類型、街道紋理與架空都市之邊界。</p>
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <!-- 主體展示：總體規劃俯視圖解析 -->
+        <section id="masterplan" class="project-feature">
+            <div class="project-map-container">
+                <!-- 俯視圖 -->
+                <img src="/main_img/birdview.png" alt="鯤鯓市都市總體規劃俯視圖" class="project-map-img">
+            </div>
+            <div class="project-info">
+                <div class="project-label">MASTERPLAN OVERVIEW</div>
+                <h2 class="project-name">鯤鯓市：空間演進與都市脈絡</h2>
+                <p class="project-desc">
+                    鯤鯓市的土地利用與路網結構，反映了臺灣沿海港市的歷史疊加過程。從左側有機交錯的舊城與鋸齒狀港口碼頭，到中軸線輻射狀的圓環幹道，再到北側與東側規整的大型方格重劃區，展現了由歷史自然發展轉向現代都市計畫的空間變遷。
+                </p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>載體 / 工具</strong>
+                        <span>Minecraft, WorldMachine, Axiom</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>核心範疇</strong>
+                        <span>港口紋理、騎樓類型學、都市天際線</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>路網結構</strong>
+                        <span>放射狀圓環、方格網重劃區、港埠鐵道</span>
+                    </div>
+                    <div class="meta-item">
+                        <strong>更新進度</strong>
+                        <span>Phase II (區劃與結構鋪設中)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精選藝廊 (Render Gallery) -->
+        <section id="gallery">
+            <div class="section-header">
+                <h2 class="section-title">空間圖鑑 / 視角展示</h2>
+                <span class="section-sub">ARCHITECTURAL TYPOLOGY & SCENERY</span>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- 卡片 1 -->
+                <article class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="/main_img/newbanner.png" alt="商業區街景" class="gallery-img">
+                    </div>
+                    <div class="gallery-body">
+                        <div class="gallery-tag">Commercial District / 商業區</div>
+                        <h3 class="gallery-title">戰後現代主義紅磚大樓與騎樓街屋</h3>
+                        <p class="gallery-text">探討洗石子外牆、面磚退縮騎樓與頂樓違章加蓋在方塊尺度下的轉譯呈現。</p>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="/main_img/tillAug.png" alt="水岸與天際線" class="gallery-img">
+                    </div>
+                    <div class="gallery-body">
+                        <div class="gallery-tag">Waterfront & Skyline / 天際線</div>
+                        <h3 class="gallery-title">港埠水岸與都市天際線過渡</h3>
+                        <p class="gallery-text">分析高層商業核心區至低密度臨港倉庫區之間的都市天際線階層與視野軸線。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 文章與文史研究 Section -->
+        <section id="essays">
+            <div class="section-header">
+                <h2 class="section-title">空間論述 & 文史考古</h2>
+                <span class="section-sub">ESSAYS & FIELD RESEARCH</span>
+            </div>
+
+            <div class="essay-list">
+                <!-- 文章 1: 系館考古 -->
+                <a href="/pages/【系館考古】成大和赤崁樓.html" class="essay-item">
+                    <div class="essay-date">ARCHAEOLOGY</div>
+                    <div>
+                        <h3 class="essay-content-title">【系館考古】成大與赤崁樓：戰時修復到戰後文資保存的半世紀淵源</h3>
+                        <p class="essay-excerpt">
+                            從1944年千千岩助太郎與顏水龍參與的赤崁樓修復工程談起，梳理歷代系上老師與台南名勝古蹟之間鮮為人知的歷史交集與空間記憶……
+                        </p>
+                    </div>
+                </a>
+               
+                <a href="/pages/【系館考古】圖書館、宿舍和醫院：那些差點變成建築系館的校地.html" class="essay-item">
+                    <div class="essay-date">ARCHAEOLOGY</div>
+                    <div>
+                        <h3 class="essay-content-title">【系館考古】圖書館、宿舍和醫院：那些差點變成建築系館的校地</h3>
+                        <p class="essay-excerpt">
+                            1980年，成大將建築系從工學院拆分，與都計、工設兩系組成一個新學院，這時候「要去哪裡找地來給這個新學院使用呢？」就變成了一個問題……
+                        </p>
+                    </div>
+                </a>
+                <!-- 文章 2: 架空都市論述預留 -->
+                <a href="#" class="essay-item">
+                    <div class="essay-date">URBAN THEORY</div>
+                    <div>
+                        <h3 class="essay-content-title">鯤鯓市都市計畫法規構想：論「臺式頂樓加蓋」的視覺秩序與建築類型學</h3>
+                        <p class="essay-excerpt">
+                            當鐵皮與加建成為臺灣城鄉地景不可分割的一部分，如何在 Minecraft 中透過像素比例解構並重新呈現這種有機的自發性建築？
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">鯤鯓市空間研究計畫</div>
+                <p>An ongoing spatial research and worldbuilding initiative based on Taiwanese architectural vernacular and urban morphology.</p>
+            </div>
+            <div>
+                <p style="color:#fff; font-weight:600; margin-bottom:0.5rem;">快速連結</p>
+                <p><a href="#masterplan">都市總體規劃</a></p>
+                <p><a href="#gallery">空間圖鑑</a></p>
+                <p><a href="#essays">研究文章</a></p>
+            </div>
+            <div>
+                <p style="color:#fff; font-weight:600; margin-bottom:0.5rem;">相關延伸</p>
+                <p><a href="/pages/gov_index.html">鯤鯓市政府資訊網 (模擬) ↗</a></p>
+                <p><a href="#">個人 Portfolio</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 -Sin City Spatial Research Project. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
