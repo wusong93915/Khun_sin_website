@@ -51,6 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     }
     
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
+    }
+
 });
 
 // 在 JavaScript 中加入監聽邏輯 //
@@ -60,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const heroImg = document.querySelector(".hero-img");
     const heroContent = document.querySelector(".hero-content");
 
-    if (hero && heroImg && heroContent) {
+    if (window.innerWidth > 768 &&hero && heroImg && heroContent) {
         
         hero.addEventListener("mousemove", function (e) {
             // 1. 取得 Hero 區塊的寬高與邊界位置

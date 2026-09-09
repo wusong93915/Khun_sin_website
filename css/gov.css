@@ -223,3 +223,152 @@
         color: #666;
         font-weight: normal;
     }
+
+    /* =========================================================
+   gov.css - 鯤鯓市府官網 (Gov Portal) 行動端 RWD 優化
+   ========================================================= */
+
+/* 基礎公部門復古視覺邊框與元件 */
+.gov-header {
+    background-color: var(--gov-blue, #003366);
+    color: #ffffff;
+    padding: 1rem;
+    border-bottom: 3px double #001f3f;
+}
+
+.gov-announcement-bar {
+    background: #fff8e7;
+    border: 1px solid #d4c49a;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* =========================================================
+   手機版 RWD 調整 (<= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* 1. 全局邊距與版面流動 */
+    .gov-container {
+        padding: 0.5rem !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. 市府 Header 與標誌排版 */
+    .gov-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .gov-title-group h1 {
+        font-size: 1.35rem;
+        letter-spacing: 1px;
+    }
+
+    .gov-title-group .subtitle {
+        font-size: 0.75rem;
+        opacity: 0.85;
+    }
+
+    /* 3. 復古公部門選單 (轉為雙欄格狀或水平滑動) */
+    .gov-nav-menu ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 手機版自動改為兩欄直立按鈕 */
+        gap: 2px;
+        background-color: #cccccc; /* 模擬經典灰色縫隙邊框 */
+        padding: 2px;
+        margin: 0.5rem 0;
+    }
+
+    .gov-nav-menu a {
+        display: block;
+        padding: 0.6rem 0.4rem;
+        background-color: #f0f0f0;
+        color: #003366;
+        text-align: center;
+        font-size: 0.85rem;
+        font-weight: bold;
+        text-decoration: none;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+    }
+
+    .gov-nav-menu a:active {
+        background-color: #d0d0d0;
+    }
+
+    /* 4. 主要雙欄排版 (Sidebar + Main) 強制轉為單欄 */
+    .gov-layout-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .gov-sidebar {
+        order: 2; /* 手機版將側邊欄（市長致詞、相關連結）移至下方 */
+    }
+
+    .gov-main-content {
+        order: 1; /* 主要市政公告排在最上方 */
+    }
+
+    /* 5. 公告表格 (Table) 橫向滾動容器 — 關鍵優化！ */
+    .gov-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border: 1px solid #003366;
+        margin-bottom: 1rem;
+    }
+
+    .gov-data-table {
+        width: 100%;
+        min-width: 500px; /* 保持表格最低寬度，避免文字擠壓變形 */
+        border-collapse: collapse;
+        font-size: 0.85rem;
+    }
+
+    .gov-data-table th, 
+    .gov-data-table td {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        white-space: nowrap; /* 防止欄位名稱碎裂 */
+    }
+
+    .gov-data-table th {
+        background-color: #e6f2ff;
+        color: #003366;
+    }
+
+    /* 6. 市長致詞 / 官網宣導區塊 (Box) 復古邊框 */
+    .gov-card {
+        border: 1px solid #003366;
+        background: #ffffff;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .gov-card-header {
+        background: #003366;
+        color: #ffffff;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: -0.8rem -0.8rem 0.8rem -0.8rem;
+    }
+
+    /* 7. 復古計數器與日期資訊 */
+    .gov-footer-info {
+        font-size: 0.78rem;
+        text-align: center;
+        background: #f5f5f5;
+        padding: 0.8rem;
+        border-top: 2px solid #003366;
+        line-height: 1.6;
+    }
+}
